@@ -1,0 +1,58 @@
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ultimate AI</title>
+        <link rel="stylesheet" href="style/style.css">
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" 
+        />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="">
+        </script>
+    </head>
+
+    <body class="map">
+        <header>
+            <img src="images/main_logo.png" alt="main logo of our project" onclick="window.location='index.html';">
+
+            <ul>
+                <li class="active"><a href="map.html">Map</a></li>
+                <li><a href="technical.html">Technical Informations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">Index</a></li>
+            </ul>
+
+            <!-- Bouton Notifications séparé (à droite) -->
+            <a href="#" id="togglePanel" class="notification-btn">
+                <img id="bellIcon" src="images/no_notif.png" alt="Notifications" class="bell-icon">
+            </a>
+        </header>
+
+        <div id="map" style="height: 100%; width: 100%; border-radius: 8px;"></div>
+
+        <div class="side-panel" id="panel">
+            <button id="closePanel" class="close-btn">&times;</button>
+            <h2>Panneau de notifications</h2>
+            
+            <div id="notifications-list"></div>
+            
+            <div id="no-notification" class="no-notification">
+                Pas de notification pour le moment.<br>
+                <small>Vous avez un compte admin ?</small>
+                <button id="btnLogin" class="btn-login">Se connecter</button>
+            </div>
+
+            <div id="user-section" class="user-section" style="display: none;">
+                <p>Connecté en tant que : <strong id="usernameDisplay"></strong></p>
+                <button id="btnLogout" class="btn-logout">Se déconnecter</button>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="scripts/main.js"></script>
+        <script type="text/javascript" src="scripts/map.js"></script>
+        <script type="text/javascript" src="scripts/notifications-realtime.js"></script>
+        <script type="text/javascript" src="scripts/notifications.js"></script>
+    </body>
+
+</html>

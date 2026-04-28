@@ -46,10 +46,11 @@ function updatePanelState() {
 // Boutons
 btnLogin.addEventListener("click", () => {
     // À remplacer par window.location = "login.php" quand tu auras la page
-    alert("Redirection vers la page de connexion (à implémenter)");
-    isLoggedIn = true;   // Pour tester
-    updatePanelState();
-    loadNotifications();
+    // alert("Redirection vers la page de connexion (à implémenter)");
+    // isLoggedIn = true;   // Pour tester
+    // updatePanelState();
+    // loadNotifications();
+    window.location = "login.php"
 });
 
 btnLogout.addEventListener("click", () => {
